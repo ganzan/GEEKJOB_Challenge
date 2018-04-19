@@ -1,5 +1,5 @@
-ƒvƒƒZƒbƒT:Intel(R)Core(TM)i5-2520M CPU @ 2.50GHz
+ï»¿CORE:Intel(R)Core(TM)i5-2520M CPU @ 2.50GHz
 
-À‘•RAM:4.00GB
+RAM:4.00GB
 
 OS:Windows 10 Home 64-bit
