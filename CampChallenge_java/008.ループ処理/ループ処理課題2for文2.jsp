@@ -18,6 +18,10 @@ String moji = "A";
 for (int i = 0; i <30; i++){
     moji = moji +"A";
 }out.print(moji);
+for (int i = 1; i <30; i++){
+    moji += "A";
+}
+out.print(moji);
 %>
     </body>
 </html>
