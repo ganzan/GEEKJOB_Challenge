@@ -33,7 +33,7 @@ out.print(data.get(4));out.print("<br>");
 out.print(data.get(5));out.print("<br>");
 out.print(data.get(6));out.print("<br>");
 
-data.set(2, "33");
+data.set(2, "33");//"soeda"を"33"に書き換え
 
 out.print("<br><br>");
 out.print(data.get(0));out.print("<br>");
