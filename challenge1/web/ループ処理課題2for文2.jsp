@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ループ処理課題1for文1
-    Created on : 2018/04/27, 15:51:46
+    Document   : ループ処理課題2for文2
+    Created on : 2018/04/27, 16:52:05
     Author     : guest1Day
 --%>
 
@@ -14,12 +14,11 @@
     <body>
         <h1></h1>
 <%
-long result = 1;
-for (int i = 1; i <=20; i++){
-    result *= 8;    
+String moji = "A";
+for (int i = 1; i <30; i++){
+    moji += "A";
 }
-out.print(result);
+out.print(moji);
 %>
-
     </body>
 </html>

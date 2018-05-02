@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ループ処理課題1for文1
-    Created on : 2018/04/27, 15:51:46
+    Document   : ループ処理課題4while文1
+    Created on : 2018/05/02, 11:22:33
     Author     : guest1Day
 --%>
 
@@ -14,12 +14,12 @@
     <body>
         <h1></h1>
 <%
-long result = 1;
-for (int i = 1; i <=20; i++){
-    result *= 8;    
-}
-out.print(result);
-%>
+float num = 1000;
 
+while(num > 100 ){
+    num /= 2;
+}
+out.print(num);
+%>
     </body>
 </html>
