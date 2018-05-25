@@ -3,47 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.mypackage.sample;
+package org.camp.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-class Human{
-    
-    public String name = "";
-    public int age = 0;
-    
-    public void setHuman(String n,int a){
-        
-        this.name = n;
-        this.age = a;
-    }
-    public void profile(){
-        
-        System.out.println(name);
-        System.out.println(age);
-    }
-
- class test{
-     
-     public void main(String[]args){
-         
-         Human hito = new Human();
-         
-     }
- }
-}
-
 /**
  *
  * @author guest1Day
  */
-public class TestServlet extends HttpServlet {
-
+public class 戻り値2 extends HttpServlet {
+    
+    ArrayList profile1(){
+        
+        ArrayList<String> profile = new ArrayList<>();
+        
+        profile.add("AさんのID");
+        profile.add("Aさんの生年月日");
+        profile.add("Aさんの住所");
+        profile.add("BさんのID");
+        profile.add("Bさんの生年月日");
+        profile.add("Bさんの住所");        
+        return profile;       
+    }  
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -61,10 +48,18 @@ public class TestServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet TestServlet</title>");            
+            out.println("<title>Servlet 戻り値2</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet TestServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet 戻り値2 at " + request.getContextPath() + "</h1>");
+            
+            int i = 0;
+            while(i<6){
+                
+                i++;out.print(profile1().get(i) + "<br>");i++;
+                
+                out.print(profile1().get(i) + "<br><br>");i++;
+            }
             out.println("</body>");
             out.println("</html>");
         }

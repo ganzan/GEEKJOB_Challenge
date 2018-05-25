@@ -3,46 +3,43 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.mypackage.sample;
+package org.camp.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-class Human{
-    
-    public String name = "";
-    public int age = 0;
-    
-    public void setHuman(String n,int a){
-        
-        this.name = n;
-        this.age = a;
-    }
-    public void profile(){
-        
-        System.out.println(name);
-        System.out.println(age);
-    }
-
- class test{
-     
-     public void main(String[]args){
-         
-         Human hito = new Human();
-         
-     }
- }
-}
-
 /**
  *
  * @author guest1Day
  */
-public class TestServlet extends HttpServlet {
+public class 引数と戻り値1 extends HttpServlet {
+    
+    ArrayList<String> profileA = new ArrayList<>();
+    ArrayList profileA(String idA){
+        
+        profileA.add(idA);
+        profileA.add("Aさんの生年月日");
+        profileA.add("Aさんの住所");        
+        return profileA;       
+    }
+    ArrayList<String> profileB = new ArrayList<>();{
+    
+        profileB.add("456");
+        profileB.add("Bさんの生年月日");
+        profileB.add("Bさんの住所");
+}
+    
+    ArrayList<String> profileC = new ArrayList<>();{
+    
+        profileC.add("789");
+        profileC.add("Cさんの生年月日");
+        profileC.add("Cさんの住所");
+}
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -61,10 +58,20 @@ public class TestServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet TestServlet</title>");            
+            out.println("<title>Servlet 引数と戻り値1</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet TestServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet 引数と戻り値1 at " + request.getContextPath() + "</h1>");
+            
+            String idA = ("123");
+            
+            int i = 0;
+            while(i<3){
+                
+                i++;out.print(profileA(idA).get(i) + "<br>");i++;
+                
+                out.print(profileA(idA).get(i) + "<br><br>");i++;
+            }
             out.println("</body>");
             out.println("</html>");
         }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.mypackage.sample;
+package org.camp.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,37 +12,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-class Human{
-    
-    public String name = "";
-    public int age = 0;
-    
-    public void setHuman(String n,int a){
-        
-        this.name = n;
-        this.age = a;
-    }
-    public void profile(){
-        
-        System.out.println(name);
-        System.out.println(age);
-    }
-
- class test{
-     
-     public void main(String[]args){
-         
-         Human hito = new Human();
-         
-     }
- }
-}
-
 /**
  *
  * @author guest1Day
  */
-public class TestServlet extends HttpServlet {
+public class クラス作成課題 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -61,10 +35,10 @@ public class TestServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet TestServlet</title>");            
+            out.println("<title>Servlet クラス作成課題</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet TestServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet クラス作成課題 at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

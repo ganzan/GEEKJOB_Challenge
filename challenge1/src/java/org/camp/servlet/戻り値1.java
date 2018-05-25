@@ -25,7 +25,7 @@ public class 戻り値1 extends HttpServlet {
         pw.print("趣味はゲームで好きな食べ物はラーメンです<br><br>");
     }
     
-    boolean modori(){
+    boolean modori(PrintWriter pw){
         return true;
     }
     /**
@@ -53,7 +53,7 @@ public class 戻り値1 extends HttpServlet {
                 myprofile(out);
             }
             
-            if(modori()){
+            if(modori(out)){
                 
                 out.print("この処理は正しく実行できました");
             }else{

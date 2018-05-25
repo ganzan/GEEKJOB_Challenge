@@ -15,7 +15,7 @@
         <h1></h1>
 <%@page import="java.util.HashMap" %>
 <%
-HashMap<String,String>prof =new HashMap<String,String>();
+    HashMap<String,String>prof =new HashMap<String,String>();
 
 prof.put("1", "AAA");
 prof.put("hello", "world");

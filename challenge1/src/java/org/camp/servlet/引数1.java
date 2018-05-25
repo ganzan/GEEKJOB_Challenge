@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.mypackage.sample;
+package org.camp.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,38 +11,37 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
-class Human{
-    
-    public String name = "";
-    public int age = 0;
-    
-    public void setHuman(String n,int a){
-        
-        this.name = n;
-        this.age = a;
-    }
-    public void profile(){
-        
-        System.out.println(name);
-        System.out.println(age);
-    }
 
- class test{
-     
-     public void main(String[]args){
-         
-         Human hito = new Human();
-         
-     }
- }
-}
 
 /**
  *
  * @author guest1Day
  */
-public class TestServlet extends HttpServlet {
+public class 引数1 extends HttpServlet {
+    
+    void guuki(int num, PrintWriter pw){
+        
+        if( num%2 == 0 ){
+            
+            pw.print(num + "は偶数です。<br>");
+        }
+        else {
+            pw.print(num + "は奇数です。<br>");
+            
+        }
+        
+    }
+    
+    void guuki(PrintWriter pw){
+        
+        guuki(0, pw);
+        
+    }
+    
+    
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -61,10 +60,13 @@ public class TestServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet TestServlet</title>");            
+            out.println("<title>Servlet 引数1</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet TestServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet 引数1 at " + request.getContextPath() + "</h1>");
+            guuki(1,out);
+            guuki(2,out);
+            guuki(out);
             out.println("</body>");
             out.println("</html>");
         }

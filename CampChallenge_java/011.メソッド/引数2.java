@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.mypackage.sample;
+package org.camp.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,37 +12,33 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-class Human{
-    
-    public String name = "";
-    public int age = 0;
-    
-    public void setHuman(String n,int a){
-        
-        this.name = n;
-        this.age = a;
-    }
-    public void profile(){
-        
-        System.out.println(name);
-        System.out.println(age);
-    }
-
- class test{
-     
-     public void main(String[]args){
-         
-         Human hito = new Human();
-         
-     }
- }
-}
-
 /**
  *
  * @author guest1Day
  */
-public class TestServlet extends HttpServlet {
+public class 引数2 extends HttpServlet {
+    
+    @SuppressWarnings("empty-statement")
+    void kakeru(int num1, int num2, Boolean bl, PrintWriter pw){
+        
+        int num = num1 * num2;
+        
+       if(bl == true){
+           
+           num *= num;
+           
+       }
+       
+       pw.print(num + "<br>");
+       
+    }
+    
+    void kakeru(int num2, PrintWriter pw){
+        
+        kakeru(5,num2,false,pw);
+    }
+            
+    
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -61,10 +57,13 @@ public class TestServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet TestServlet</title>");            
+            out.println("<title>Servlet 引数2</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet TestServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet 引数2 at " + request.getContextPath() + "</h1>");
+            kakeru(10,8,false,out);
+            kakeru(4,out);
+            kakeru(7,3,true,out);
             out.println("</body>");
             out.println("</html>");
         }

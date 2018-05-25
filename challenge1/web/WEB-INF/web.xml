@@ -4,13 +4,85 @@
         <servlet-name>FortuneTelling</servlet-name>
         <servlet-class>org.camp.servlet.FortuneTelling</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>引数2</servlet-name>
+        <servlet-class>org.camp.servlet.引数2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>戻り値1</servlet-name>
+        <servlet-class>org.camp.servlet.戻り値1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>戻り値2</servlet-name>
+        <servlet-class>org.camp.servlet.戻り値2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>引数と戻り値1</servlet-name>
+        <servlet-class>org.camp.servlet.引数と戻り値1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>引数と戻り値2</servlet-name>
+        <servlet-class>org.camp.servlet.引数と戻り値2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>引数と戻り値3</servlet-name>
+        <servlet-class>org.camp.servlet.引数と戻り値3</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>クラス作成</servlet-name>
+        <servlet-class>org.camp.servlet.クラス作成</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>クラス作成課題</servlet-name>
+        <servlet-class>org.camp.servlet.クラス作成課題</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>FortuneTelling</servlet-name>
         <url-pattern>/FortuneTelling</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>引数2</servlet-name>
+        <url-pattern>/__2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>戻り値1</servlet-name>
+        <url-pattern>/___1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>戻り値2</servlet-name>
+        <url-pattern>/___2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>引数と戻り値1</servlet-name>
+        <url-pattern>/______1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>引数と戻り値2</servlet-name>
+        <url-pattern>/______2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>引数と戻り値3</servlet-name>
+        <url-pattern>/______3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>クラス作成</servlet-name>
+        <url-pattern>/_____</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>クラス作成課題</servlet-name>
+        <url-pattern>/_______</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    
+    <servlet>
+        <servlet-name>クラスの作成</servlet-name>
+        <servlet-class>org.camp.servlet.クラスの作成</servlet-class>
+    </servlet>
+    
+    
+    
 </web-app>
